@@ -4,7 +4,7 @@ from appium.webdriver.common.touch_action import TouchAction
 class BaseDriver:
     def __init__(self, driver):
         self.driver = driver
-        driver.implicitly_wait(15)
+        self.driver.implicitly_wait(15)
         self.action = TouchAction(self.driver)
 
 
