@@ -17,6 +17,5 @@ app_params['app'] = \
 @pytest.yield_fixture(scope='function')
 def main_shows_page():
     driver = webdriver.Remote('http://localhost:4723/wd/hub', app_params)
-    # driver.implicitly_wait(15)
     yield MainShowsPage(driver)
     driver.quit()
